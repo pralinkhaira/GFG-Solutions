@@ -6,29 +6,22 @@ using namespace std;
 
 
 // } Driver Code Ends
-//User function Template for C++
-
 class Solution
 {
     public:
-    // Function to check if Kth bit is set or not.
     bool checkKthBit(int n, int k)
     {
         // Your code here
-        // It can be a one liner logic!! Think of it
         vector<int>arr;
        while(n>0){
            int digit = n%2;
            arr.push_back(digit);
            n /=2;
        }
-       
-       // now we see the kth position and if vector size is less than k so return false
        int m = arr.size()-1;
        if(arr[k]==1 && m>=k){
            return true;
        }
-       
        return false;
     }
 };
